@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вологодский агротуризм</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .jumbotron {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/header.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 200px 0;
+            margin-bottom: -80px;
+        }
+        .card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .feature-box {
+            padding: 30px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .feature-box i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #28a745;
+        }
+        .testimonial {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 50px 0;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            color: #28a745;
+        }
+        .payment-systems {
+            margin-top: 15px;
+        }
+        .payment-systems i, .payment-systems img {
+            vertical-align: middle;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            border-radius: 5px;
+        }
+        .payment-systems i:hover, .payment-systems img:hover {
+            opacity: 1;
+        }
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            border-radius: 0.25rem;
+        }
+    
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="padding-left: 120px;">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Лого" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Отзывы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Контакты</a>
+                </li>
+            </ul>
+            <span class="navbar-text" style="padding-right: 120px;">
+                <a href="tel:+79005027437" class="btn btn-outline-light">
+                    <i class="fas fa-phone" style="transform: scaleX(-1);"></i> +7 (900) 502-74-37</a>
+            </span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Агротуризм в Вологодской области</h1>
+            <p class="lead">Насладитесь природой, чистым воздухом и аутентичным деревенским бытом</p>
+            <a href="#services" class="btn btn-success btn-lg mt-3">Наши предложения</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">О нашем агротуризме</h2>
+                    <p>Наша ферма расположена в экологически чистом районе Вологодской области, вдали от городской суеты. Мы предлагаем уникальный опыт сельской жизни с современным комфортом.</p>
+                    <p>Основанный в 2010 году, наш агротуристический комплекс вырос из небольшой семейной фермы в популярное место отдыха для городских жителей, желающих отдохнуть на природе.</p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-light"><i class="fas fa-check text-success mr-2"></i> 50 гектаров экологически чистой территории</li>
+                        <li class="list-group-item bg-light"><i class="fas fa-check text-success mr-2"></i> Собственное фермерское хозяйство</li>
+                        <li class="list-group-item bg-light"><i class="fas fa-check text-success mr-2"></i> Комфортабельные домики с современными удобствами</li>
+                        <li class="list-group-item bg-light"><i class="fas fa-check text-success mr-2"></i> Более 1000 довольных гостей ежегодно</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" style="padding-top: 50px;">
+                    <img src="img/farm.png" alt="Наша ферма" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Почему выбирают нас</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Экология</h3>
+                        <p>Чистый воздух, родниковая вода и органические продукты с нашей фермы.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-home"></i>
+                        <h3>Комфорт</h3>
+                        <p>Уютные домики с современными удобствами в гармонии с природой.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Питание</h3>
+                        <p>Домашняя кухня из натуральных продуктов, выращенных на нашей ферме.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Наши услуги</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/enot.png" class="card-img-top" alt="Контактный зоопарк">
+                        <div class="card-body">
+                            <h5 class="card-title">Контактный зоопарк</h5>
+                            <p class="card-text">Пообщайтесь с нашими дружелюбными животными: кроликами, козами, овечками и даже енотами!</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Кормление животных</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Фотосессии</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Уход за животными</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/zone.png" class="card-img-top" alt="Рыбалка">
+                        <div class="card-body">
+                            <h5 class="card-title">Рыбалка и отдых у воды</h5>
+                            <p class="card-text">Наш пруд богат рыбой, а на берегу оборудована комфортная зона отдыха с мангалом.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Аренда снастей</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Помощь инструктора</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Приготовление улова</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/berry.png" class="card-img-top" alt="Сбор урожая">
+                        <div class="card-body">
+                            <h5 class="card-title">Сбор ягод и грибов</h5>
+                            <p class="card-text">Сезонные программы сбора лесных и садовых даров природы с возможностью их заготовки.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Экскурсии с гидом</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Мастер-классы по заготовкам</li>
+                                <li class="list-group-item"><i class="fas fa-check text-success mr-2"></i> Дегустации</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-horse fa-3x mb-3 text-success"></i>
+                            <h5>Конные прогулки</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-bicycle fa-3x mb-3 text-success"></i>
+                            <h5>Велосипедные маршруты</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-spa fa-3x mb-3 text-success"></i>
+                            <h5>Баня и СПА</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-child fa-3x mb-3 text-success"></i>
+                            <h5>Детские программы</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Наша галерея</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo1.png" alt="Фото 1" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo2.png" alt="Фото 2" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo3.png" alt="Фото 3" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo4.png" alt="Фото 4" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo5.png" alt="Фото 5" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="img/photo6.png" alt="Фото 6" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-outline-success">Смотреть все фото</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Отзывы наших гостей</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"Отличное место для семейного отдыха! Дети в восторге от животных, а мы с мужем - от природы и тишины. Обязательно вернемся!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/woman.png" alt="Аватар" class="rounded-circle mr-3" width="50px" height="50">
+                            <div>
+                                <h6 class="mb-0">Ольга Смирнова</h6>
+                                <small class="text-muted">Москва</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"Впервые попробовал настоящую деревенскую жизнь. Рыбалка, баня, свежий воздух - все на высшем уровне. Персонал очень внимательный!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/man.png" alt="Аватар" class="rounded-circle mr-3" width="50px" height="50px">
+                            <div>
+                                <h6 class="mb-0">Иван Петров</h6>
+                                <small class="text-muted">Санкт-Петербург</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p>"Отличное место для корпоративного отдыха. Команда сплотилась, все получили массу положительных эмоций. Особенно понравились мастер-классы."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/woman.png" alt="Аватар" class="rounded-circle mr-3" width="50px" height="50px">
+                            <div>
+                                <h6 class="mb-0">Анна Козлова</h6>
+                                <small class="text-muted">Вологда</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Как нас найти</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Наши контакты</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt text-success mr-2"></i> Вологодская область, Кирилловский район, д. Иваново</li>
+                        <li class="mb-2"><i class="fas fa-phone text-success mr-2"></i> +7 (900) 502-74-37</li>
+                        <li class="mb-2"><i class="fas fa-envelope text-success mr-2"></i> p4savchenko@yandex.ru</li>
+                        <li class="mb-2"><i class="fas fa-clock text-success mr-2"></i> Круглосуточно, без выходных</li>
+                    </ul>
+                    <h4 class="mt-4">Мы в соцсетях</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/vk.png" width="50px" height="50px"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276720.123456789!2d38.123456!3d59.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDA3JzI0LjQiTiAzOMKwMDcnMjQuNCJF!5e0!3m2!1sru!2sru!4v1234567890123!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-4">Остались вопросы?</h2>
+                    <p class="text-center mb-5">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" placeholder="Телефон" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>Вологодский агротуризм</h5>
+                <p>Отдых на природе с комфортом. Уникальные программы для всей семьи.</p>
+                <p>© 2025 Все права защищены</p>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>Быстрые ссылки</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white">Главная</a></li>
+                    <li><a href="#about" class="text-white">О нас</a></li>
+                    <li><a href="#services" class="text-white">Услуги</a></li>
+                    <li><a href="#gallery" class="text-white">Галерея</a></li>
+                    <li><a href="#contacts" class="text-white">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Подписаться на новости</h5>
+                <form class="mb-3">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Ваш email">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit">OK</button>
+                        </div>
+                    </div>
+                </form>
+                <h5>Принимаем к оплате</h5>
+                <div class="payment-systems">
+                    <img src="img/sbp.png" alt="SBP" style="height: 32px; width: auto; margin-right: 10px;" title="SBP">
+                    <img src="img/mir.png" alt="MIR" style="height: 32px; width: auto; margin-right: 100px;" title="MIR">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="scrollToBottomBtn" style="position: fixed; bottom: 20px; right: 20px; z-index: 99; cursor: pointer; display: none; background-color: #28a745; color: white; width: 50px; height: 50px; border-radius: 50%; text-align: center; line-height: 50px; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+    <i class="fas fa-arrow-down"></i>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Учитываем высоту навбара
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+    });
+    window.onscroll = function() {
+        var btn = document.getElementById('scrollToBottomBtn');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    document.getElementById('scrollToBottomBtn').addEventListener('click', function() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+    </script>
+</body>
+</html>
